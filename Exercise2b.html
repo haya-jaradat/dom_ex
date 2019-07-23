@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #2b: Randomizing initial color</title>
+    <style>
+        #mydiv {
+            width: 200px;
+            height: 200px;
+            border: 1px solid black;
+        
+        }
+    </style>
+
+</head>
+<body>
+    
+<div onclick="myFunction1()" id="mydiv"></div>
+ <script>
+        function myFunction1(){
+          var colorBox = ["blue", "green", "red", "magenta", "yellow", "orange"];
+          var m1 = document.getElementById("mydiv");
+          var rnd = Math.floor((Math.random() * colorBox.length));
+          m1.style.backgroundColor = colorBox[rnd];
+          m1.onclick = theChangeColor; 
+        }
+    </script>
+       
+
+
+</body>
+</html>
